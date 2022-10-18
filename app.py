@@ -17,7 +17,7 @@ from sklearn.metrics import confusion_matrix , classification_report
 from wordcloud import WordCloud
 
 
-model = pickle.load(open('FED_pickle','rb'))
+model = pickle.load(open('./FED_pickle','rb'))
 def predict_Email(docx):
     test_results = model.predict([docx])
     output = np.where(test_results>0.4,'spam', 'ham')
