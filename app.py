@@ -20,7 +20,7 @@ nltk.download('wordnet')
 nltk.download('omw-1.4')
 
 
-model = pickle.load(open('/home/mr1ncr1d1ble/github/SpamEmailDetection-NLP-Project/APP/FED_pickle','rb'))
+model = pickle.load(open('./model','rb'))
 def predict_Email(docx):
     test_results = model.predict([docx])
     output = np.where(test_results>0.4,'spam', 'ham')
