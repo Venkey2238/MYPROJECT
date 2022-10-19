@@ -15,6 +15,9 @@ from sklearn.model_selection import train_test_split
 import tensorflow as tf
 from sklearn.metrics import confusion_matrix , classification_report
 from wordcloud import WordCloud
+nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
 
 
 model = pickle.load(open('/home/mr1ncr1d1ble/github/SpamEmailDetection-NLP-Project/APP/FED_pickle','rb'))
